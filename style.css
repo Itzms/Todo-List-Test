@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@300;400;600&family=Lexend:wght@300;400;600&display=swap');
+body {
+    font-family: 'Inter', 'Montserrat', 'Lexend', sans-serif;
+    background-color: var(--bodyBG);
+    color: var(--font);
+    position: relative;
+    padding: 1%;
+    border-radius: 2%;
+    height: 75vh;
+}
+header::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, var(--radFrom), var(--radTo));
+    border-radius: 3%;
+    z-index: -1;
+    opacity: 0.3;
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+/*MENU WORKING WITH SIDE SLIDE BAR*/
+.sidebar{
+    position: fixed;
+    top:0;
+    left:-50%;
+    height: 100%;
+    width:50%;
+    transition: left 0.2s ease-in;
+    z-index:9999;
+    background-color: var(--bg);
+}
+.sidebar.active{
+    left:0;
+}
+
+.menu {
+    position: relative;
+    background-color: var(--bg);
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: auto; /* Make the menu scrollable if needed */
+    box-sizing: border-box;
+    padding: 1%;
+    margin-top:25%;
+}
+.Heading {
+    margin:0;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: auto; /* Make the heading scrollable if needed */
+    justify-content: space-evenly;
+}
+.menu-head{
+    display: flex;
+    align-items: center;
+    color: var(--font);
+    font-weight: 800;
+    font-size: 100%;
+    font-family:'Inter', sans-serif;
+    text-align: center;
+}
+.menu-head img{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+.menu-layout{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    color: whitesmoke;
+    margin:0;
+}
+.item-layout{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+input{
+    all: unset;
+    width: 100%;
+    text-align: center;
+    background-color: var(--inputBg);
+    color:var(--font);
+}
+a{
+    all:unset;
+}
+button{
+    all: unset;
+    background: rgba(180,180,180,0.7);
+    color: black;
+    width: 100%;
+    padding: 10%;
+    border-radius: 5%;
+}
+.menu-list{
+    all:unset;
+    list-style: none;
+    font-family: 'Lexend';
+    font-weight: 300;
+    font-size: 120%;
+    text-align: center;
+    color:var(--font);
+}
+.menu-list .item-layout:hover{
+    border-radius: 100%;
+    animation: wavy 0.5s ease-in 1;
+}
+@keyframes wavy{
+    0%{
+        background-color: var(--wavyBg);
+        border-radius: 100%;
+    }
+    25%{
+        background-color: var(--wavyBg);
+        border-radius: 80%;
+    }
+    50%{
+        background-color: var(--wavyBg);
+        border-radius: 60%;
+    }
+    75%{
+        background-color: var(--wavyBg);
+        border-radius: 40%;
+    }
+    100%{
+        background-color: transparent;
+        border-radius: 0%;
+    }
+}
+
+
+
+/*Specific CSS For Theme Page*/
+.theme-body{
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.themes{
+    display: flex;
+    white-space: nowrap;
+    flex-direction: column;
+    padding: 12%;
+    text-align: center;
+    background-color: var(--themebg);
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 12%;
+    background-color: var(--themebg);
+    justify-content: space-around;
+}
+
+.radio-layout{
+    display: flex;
+    align-self: center;
+    flex-wrap: nowrap;
+    font-weight: 700;
+    font-size:18px;
+}
+/* Hide the default radio button */
+input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline;
+    position: relative;
+}
+
+/* Style the checked (selected) radio button */
+input[type="radio"]:checked {
+    background-color: blue; /* Change to any color */
+    border: 2px solid blue;
+}
+
+/* Optional: Add a colored dot inside when selected */
+input[type="radio"]::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: var(--radio); /* Inner dot color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+input[type="radio"]:checked::before {
+    display: block;
+}
+
+/*Main Content of The Home Page*/
+.content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    height: 100%;
+    max-height: calc(80vh-2%);
+    overflow-x: hidden;
+    justify-content: flex-start;
+    padding-top: 1%;
+}
+.row-titles{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    overflow-x: scroll;
+    width:100%;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    padding:6% 0 6% 0;
+}
+.titles{
+    padding: 2% 3% 2% 3%;
+    align-self: center;
+    border-radius: 30px;
+    background-color: var(--bg);
+    margin:1px 30px 1px 2px;
+    transition: background;
+}
+.titles:hover{
+    background: wheat;
+    color: black;
+}
+.task{
+    position:relative;
+    margin: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10% 1% 10% 1%;
+    color:var(--colour);
+}
+.task::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, var(--radFrom), var(--radTo));
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0.4;
+}
+footer::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, var(--radFrom), var(--radTo));
+    border-radius: 3%;
+    z-index: -1;
+    opacity: 0.6;
+}
+footer{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+/*
+input[type="checkbox"]{
+    border: 1px solid var(--font);
+    height: 15px;
+    width: 15px;
+}*/

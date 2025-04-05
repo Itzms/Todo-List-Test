@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/js.js" defer></script> <!-- Use defer to load JS after HTML -->
+  <title>Theme</title>
+</head>
+<body onload="main()">  <!-- Calls main() after the page is loaded -->
+  <div class ="theme-body">
+    <h1 id = "tmp" style="text-align:center;color:var(--colour);">
+      Simple Theme Control UI
+    </h1>
+    <div style="display:flex;overflow:hidden;border:2px solid rgb(180,180,255);background-color:var(--themebg);">
+      <div class ="themes">
+        <h3 style="padding: 10%;font-weight:400;">Light Mode</h3>
+        <h3 style="padding: 10%;font-weight:400;">Dark Mode</h3>
+      </div>
+        <form class = "buttons">
+          <label class="radio-layout" for = "o1">Select  <input type="radio" id = "o1" name = "mode" onclick = "Bit.key = 0; changeMode();"></label>
+          <label class="radio-layout" for = "o2">Select  <input type="radio" id = "o2" name = "mode" onclick = "Bit.key = 1; changeMode();"></label>
+        </form>
+    </div>
+  </div>
+</body>
+</html>

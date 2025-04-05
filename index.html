@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <script src = "scripts/js.js" defer ></script>
+  <title>TO DO LIST</title>
+</head>
+<body onload="main()">
+  <div class = "sidebar">
+    <nav class="menu">
+      <header class="Heading">
+        <span class="menu-head"><img src = "/storage/emulated/0/DCIM/Screenshots/IMG_20250205_100043.jpg"></span>
+        <span class = "menu-head">SUPER TRACKER <br>MENU</span>
+      </header>
+      <div class="menu-layout">
+        <input type="text" class = "item-layout" placeholder= "🔎 SEARCH">
+      </div>
+      <div class="menu-layout">
+        <ul class="menu-list">
+          <li class="item-layout">Home</li>
+          <li class="item-layout">Dashboard</li>
+          <li class="item-layout">Profile</li>
+          <li class="item-layout">Community</li>
+          <li class="item-layout">Settings</li>
+          <li class="item-layout"><a href = "/storage/emulated/0/Skill Desarrollo/TO-DO LIST/theme.html">Theme</a></li>
+          <li class="item-layout">Contact</li>
+          <li class="item-layout">FAQs</li>
+        </ul>
+      </div>
+      <div class="menu-layout">
+        <button class="item-layout">LOGOUT</button>
+      </div>
+    </nav>    
+    <h4 style="position:fixed;top:0;height:30px;width:50%;color:var(--font);font-weight:800;text-align:center;"  onclick = "toggleMenu()">☰ Close MENU <<</h4>
+    </div>
+    <header>
+      <h4 style="padding:1%;color:var(--font);font-weight:800;text-align:center;"  onclick = "toggleMenu()">☰ Open MENU</h4>
+      <h1 id = 'tmp' style="text-align:center;color:var(--colour);">
+      TASK TRACKER
+      </h1>
+    </header>
+      
+  <main class = "content" >
+    <div class = "row-titles">
+      <h3 class="titles">All</h3>
+      <h3 class="titles">Routines</h3>
+      <h3 class="titles">Office</h3>
+      <h3 class="titles">Gym</h3>
+      <h3 class="titles">Club</h3>
+      <h3 class="titles">Family</h3>
+      <h3 class="titles">Friends</h3>
+      <h3 class="titles">India</h3>
+      <h3 class="titles">Karnataka</h3>
+      <h3 class="titles">+</h3>
+    </div>
+        <p class = "task"> Task 1 </p>
+        <p class = "task"> Task 2 </p>
+        <p class = "task"> Task 3 </p>
+        <p class = "task"> Task 4 </p>
+        <p class = "task"> Task 5 </p>
+        <p class = "task"> Task 6 </p>
+        <p class = "task"> Task 7 </p>
+        <p class = "task"> Task 8 </p>
+        <p class = "task"> Task 9 </p>
+      
+    
+  </main>
+      <footer>
+        <h1>+</h1>
+      </footer>
+  </body>
+</html>
